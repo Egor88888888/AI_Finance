@@ -8,3 +8,5 @@ pip install -r xai_finance_agent/requirements.txt
 export XAI_API_KEY="<your api key>"
 python xai_finance_agent/xai_finance_agent.py
 ```
+This launches a Gradio chat interface with `share=True` so you can
+interact with the agent in your browser.

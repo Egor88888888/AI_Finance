@@ -2,7 +2,7 @@ from agno.agent import Agent
 from agno.models.xai import xAI
 from agno.tools.yfinance import YFinanceTools
 from agno.tools.duckduckgo import DuckDuckGoTools
-from agno.playground import Playground, serve_playground_app
+import gradio as gr
 
 agent = Agent(
     name="xAI Finance Agent",
@@ -13,7 +13,14 @@ agent = Agent(
     markdown=True,
 )
 
-app = Playground(agents=[agent]).get_app()
+def run_agent(query: str) -> str:
+    """Run the xAI finance agent and return the response as a string."""
+    response = agent.run(query)
+    if hasattr(response, "get_content_as_string"):
+        return response.get_content_as_string()
+    return str(response)
+
 
 if __name__ == "__main__":
-    serve_playground_app("xai_finance_agent:app", reload=True)
+    interface = gr.Interface(fn=run_agent, inputs="text", outputs="text", title="xAI Finance Agent")
+    interface.launch(share=True)
