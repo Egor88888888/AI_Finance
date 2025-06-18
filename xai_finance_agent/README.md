@@ -1,12 +1,12 @@
 ## 📊 AI Finance Agent with xAI Grok
-This application creates a financial analysis agent powered by xAI's Grok model, combining real-time stock data with web search capabilities. It provides structured financial insights through an interactive playground interface.
+This application creates a financial analysis agent powered by xAI's Grok model, combining real-time stock data with web search capabilities. It provides structured financial insights through a simple Gradio chat interface.
 
 ### Features
 - Powered by xAI's Grok-beta model
 - Real-time stock data analysis via YFinance
 - Web search capabilities through DuckDuckGo
 - Formatted output with tables for financial data
-- Interactive playground interface
+- Interactive Gradio interface
 
 ### How to get Started?
 1. Clone the GitHub repository
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```bash
 export XAI_API_KEY='your-api-key-here'
 ```
-4. Run the agent:
+4. Run the agent to launch a Gradio interface:
 ```bash
 python xai_finance_agent.py
 ```

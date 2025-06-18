@@ -2,7 +2,7 @@ from agno.agent import Agent
 from agno.models.xai import xAI
 from agno.tools.yfinance import YFinanceTools
 from agno.tools.duckduckgo import DuckDuckGoTools
-from agno.playground import Playground, serve_playground_app
+from agno.playground import Playground
 import gradio as gr
 
 agent = Agent(
