@@ -9,19 +9,10 @@ agent = Agent(
     name="xAI Finance Agent",
     model=xAI(id="grok-beta"),
     tools=[DuckDuckGoTools(), YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True)],
-    instructions=["Always use tables to display financial/numerical data. For text data use bullet points and small paragrpahs."],
+    instructions=["Always use tables to display financial/numerical data. For text data use bullet points and small paragraphs."],
     show_tool_calls=True,
     markdown=True,
 )
-
-def run_agent(query: str) -> str:
-    """Run the xAI finance agent and return the response as a string."""
-    response = agent.run(query)
-    if hasattr(response, "get_content_as_string"):
-        return response.get_content_as_string()
-    return str(response)
-
-
 
 def run_agent(query: str) -> str:
     """Run the xAI finance agent and return the response as a string."""
