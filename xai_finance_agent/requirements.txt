@@ -3,3 +3,4 @@ duckduckgo-search
 yfinance
 fastapi[standard]
 openai
+gradio
