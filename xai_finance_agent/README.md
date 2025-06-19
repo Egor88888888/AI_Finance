@@ -1,8 +1,8 @@
-## 📊 AI Finance Agent with xAI Grok
-This application creates a financial analysis agent powered by xAI's Grok model, combining real-time stock data with web search capabilities. It provides structured financial insights through a simple Gradio chat interface.
+## 📊 AI Finance Agent with Google Gemini
+This application creates a financial analysis agent powered by Google's Gemini model, combining real-time stock data with web search capabilities. It provides structured financial insights through a simple Gradio chat interface.
 
 ### Features
-- Powered by xAI's Grok-beta model
+- Powered by Google's gemini-pro model
 - Real-time stock data analysis via YFinance
 - Web search capabilities through DuckDuckGo
 - Formatted output with tables for financial data
@@ -18,9 +18,9 @@ cd awesome-llm-apps/ai_agent_tutorials/xai_finance_agent
 ```bash
 pip install -r requirements.txt
 ```
-3. Get your xAI API Key and export it as an environment variable:
+3. Get your Google API key and export it as an environment variable:
 ```bash
-export XAI_API_KEY='your-api-key-here'
+export GOOGLE_API_KEY='your-api-key-here'
 ```
 4. Run the agent to launch a Gradio interface:
 ```bash

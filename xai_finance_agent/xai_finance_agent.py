@@ -5,9 +5,11 @@ from agno.agent import Agent
 from agno.tools.yfinance import YFinanceTools
 from agno.tools.duckduckgo import DuckDuckGoTools
 
-# 🔐 Установите ваш ключ Google Gemini
-os.environ["GOOGLE_API_KEY"] = "AIzaSyD-oRb45v1ZuBy9MS4Ho-L-7BiU21qSsAE"
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+# 🔐 Установите ваш ключ Google Gemini в переменную окружения `GOOGLE_API_KEY`
+api_key = os.environ.get("GOOGLE_API_KEY")
+if not api_key:
+    raise EnvironmentError("GOOGLE_API_KEY environment variable not set")
+genai.configure(api_key=api_key)
 
 # ✅ Обёртка для Gemini вместо xAI
 class GeminiModel:
