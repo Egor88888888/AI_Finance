@@ -4,3 +4,4 @@ yfinance
 fastapi[standard]
 openai
 gradio
+google-generativeai
